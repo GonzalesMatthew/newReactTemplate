@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 function NotFound() {
   return (
-    <>
+    <div>
       This is a blank page ...
-    </>
+    </div>
   );
 }
 
