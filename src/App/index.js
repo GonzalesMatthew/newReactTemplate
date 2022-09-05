@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from '../components/NavBar';
 import firebaseConfig from '../helpers/apiKeys';
 import Routes from '../helpers/Routes';
@@ -30,13 +30,9 @@ function App() {
 
   return (
     <>
-    <NavBar
-      user={user}
-    />
-    <Routes
-      user={user}
-    />
-  </>
+      <NavBar user={user} />
+      <Routes user={user} />
+    </>
   );
 }
 
