@@ -31,23 +31,21 @@ const NavBar = ({ user }) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Brand Name</NavbarBrand>
+        <NavbarBrand href="/">musicPage</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             { user && authenticated()}
-            <NavItem>
-              {
-                user !== null
-                && <NavItem>
-                  {
-                    user
-                      ? <Button color='danger' onClick={signOutUser}>Sign Out</Button>
-                      : <Button color='info' onClick={signInUser}>Sign In</Button>
-                  }
-                </NavItem>
-              }
-            </NavItem>
+            {
+              user !== null
+              && <NavItem>
+                {
+                  user
+                    ? <Button color='danger' onClick={signOutUser}>Sign Out</Button>
+                    : <Button color='info' onClick={signInUser}>Sign In</Button>
+                }
+              </NavItem>
+            }
           </Nav>
         </Collapse>
       </Navbar>
